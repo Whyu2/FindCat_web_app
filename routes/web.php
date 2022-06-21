@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', [PageController::class, 'index'])->name('index');
+Route::get('/detail/{id}', [PageController::class, 'show'])->name('show');
+Route::get('/tambah_post/', [PostsController::class, 'index'])->name('tambah_post');

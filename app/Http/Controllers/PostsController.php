@@ -1,36 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-use Carbon\Carbon;
-use App\Models\Posts;
-use Dflydev\DotAccessData\Data;
+
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
-class PageController extends Controller
+
+class PostsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->posts = new Posts();
-    }
     public function index()
     {
-        $post=http::get('http://localhost:3000/posts')->json();
-        $posts = collect($post);
-        $d = Carbon::now()->format('Y-m-d H:i:s');
-        $data = [
-        'posts' => $posts,
-        'c_posts' => $this->posts,
-        'now_date' => $d
-    ];
-
-      
-
-    return view('home', $data);
+        return view('tambah_post');
     }
 
     /**
@@ -52,16 +35,7 @@ class PageController extends Controller
      */
     public function show($id)
     {
-        $post=http::get('http://localhost:3000/posts')->json();
-        $posts = collect($post)->where('id', $id)->first();
-        $d = Carbon::now()->format('Y-m-d H:i:s');
-     
-        $data = [
-            'posts' => $posts,
-            'c_posts' => $this->posts,
-            'now_date' => $d
-        ];
-        return view('detail', $data);
+        //
     }
 
     /**
