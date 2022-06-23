@@ -19,21 +19,38 @@
         <div class="col p-3 ">
             <div class="col"><h3>Deskripsi</h3>
 
-                <form action="">
+                <form action="/post/store" method="post">
+                    @csrf
                     <div class="flex-rev">
-                        <input type="text" placeholder="Masukkan si kucing, misal yanto, sigundul, paijo dll" name="name" id="name" />
+                        <input type="text" placeholder="Masukkan si kucing, misal yanto, sigundul, paijo dll" name="nama" id="name" />
                         <label for="name">Nama</label>
                     </div>
                     <div class="flex-rev">
-                        <input type="email" placeholder="Masukkan jenis" name="email" id="email" />
-                        <label for="email">Jenis</label>
+                        <input type="text" placeholder="Masukkan dearah hilangnya" name="daerah" id="daerah" />
+                        <label for="daerah">Daerah</label>
+                    </div>
+                    <div class="flex-rev">
+                        <input type="text" placeholder="Masukkan lokasi map" name="map" id="map" />
+                        <label for="map">Lokasi Map</label>
+                    </div>
+                    <div class="flex-rev">
+                        <input type="date" placeholder="Tanggal hilang" name="tgl_hilang" id="tgl_hilang" />
+                        <label for="tgl_hilang">Tanggal Hilang</label>
+                    </div>
+                    <div class="flex-rev">
+                        <input type="text" placeholder="Jenis kucing" name="jenis" id="jenis" />
+                        <label for="jenis">Jenis</label>
+                    </div>
+                    <div class="flex-rev">
+                        <input type="text" placeholder="Kelamin kucing" name="kelamin" id="kelamin" />
+                        <label for="kelamin">Jenis Kelamin</label>
                     </div>
     
                     <div class="flex-rev">
-                        <textarea placeholder="Informasi terakhir / ciri - ciri khusus" name="message" id="message" /></textarea>
-                        <label for="message">Informasi</label>
+                        <textarea placeholder="Informasi terakhir / ciri - ciri khusus" name="informasi" id="informasi" /></textarea>
+                        <label for="informasi">Informasi</label>
                     </div>
-                    <button>Post</button>
+                    <button type="submit" >Post</button>
                 </form>
             </div>
         </div>

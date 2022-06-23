@@ -7,18 +7,13 @@
                 <div class="col-md-4 mb-4  card2 mx-auto  bg-white text-dark">
    
               <div class="row">
-                <div class="col-md-9">
-                    <form action="">
-                        <div class="flex-rev">
-                            <input type="text" placeholder="Search" name="name" id="name" />
-                        </div>
+                <div class="col">
+                   <h2 class="text-center">LIST POSTINGAN </h2>
              
                 </div>
-                <div class="col-md-3 mt-2">
-                 <i class="fas fa-search fa-3x"></i>
-                </div>
+              
               </div>
-            </form>
+     
                        
                
             </div>
@@ -46,13 +41,27 @@
                     </div>
             
                     </div>
-                 
+                    <a class="btn card2" type="submit" >Edit</a>
+                    {{-- <a  class="btn card2 delete" value="{{$m['id']}}"  id="{{$m['id']}}">Hapus</a> --}}
+                    <button type="button" value="{{$m['id']}}"  class="btn card2 delete">Hapus</button>
                 </div>
+               
               </div>
             </div>
             
             @endforeach
-          
+            
+              
+            <div class="col-xl-3  col-md-6">
+              <div class="col-md-3 col-sm-3 col-xs-3">&nbsp;</div>
+              <div class="card card2 mx-auto text-center mt-5 mb-5">
+              
+                <a href="/tambah_post" type="submit" ><i class="fas fa-plus fa-9x text-dark"></i></a>
+              </div>
+          </div>
+           
+           
+            
             
           
         </div>

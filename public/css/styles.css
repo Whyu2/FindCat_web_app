@@ -12297,9 +12297,10 @@ body {
     padding: 12px 10px;
     font-size: 16px;
     resize: none;
-    margin-top: 7px;
-    margin-bottom: 16px;
-    border-radius: 5px;
+    margin-top: 9px;
+    /* margin-bottom: 16px; */
+    margin-bottom: 1px;
+    border-radius: 1px;
     color: #243342;
     outline-color: #243342;
     outline-width: thin;
